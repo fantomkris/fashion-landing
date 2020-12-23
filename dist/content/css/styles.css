@@ -1,0 +1,46 @@
+/* Color pallet */
+/* Color pallet */
+/* Color pallet */
+/* Color pallet */
+/* Color pallet */
+/* Color pallet */
+/* Color pallet */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Color pallet */
+/* Color pallet */
+/* Color pallet */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Page layout */
+
+/*# sourceMappingURL=styles.css.map*/
