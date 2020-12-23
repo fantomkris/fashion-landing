@@ -1,4 +1,24 @@
-/* Color pallet */
+@import "functions";
 
-$black:             #000000;
-$white:             #ffffff;
+:root {
+
+    /* Color pallet */
+
+    --black:             #000000;
+    --gray-800:          #22262A;
+    --white:             #ffffff;
+
+    /* Fonts */
+    --ff-base:               "Poppins", Arial, sans-serif;
+
+    --fw-light:              300;
+    --fw-regular:            400;
+    --fw-medium:             500;
+    --fw-semibold:           600;
+    --fw-bold:               700;
+
+    --fst-italic:            italic;
+}
+
+/* Font size */
+$fsz-15:                rem-calc(15);

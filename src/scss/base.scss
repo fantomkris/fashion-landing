@@ -1,5 +1,4 @@
-@import "variables";
-@import "mixins";
+@import "functions";
 
 *,
 *::before,
@@ -11,6 +10,11 @@ html,
 body {
     margin: 0;
     padding: 0;
+    font-family: var(--ff-base);
+    font-size: $fsz-15;
+    font-weight: var(--fw-regular);
+    line-height: f-unitless-lh(15, 22);
+    color: var(--gray-800);
 }
 
 a {
