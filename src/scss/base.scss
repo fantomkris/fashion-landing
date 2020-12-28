@@ -13,19 +13,57 @@ body {
     font-family: var(--ff-base);
     font-size: $fsz-15;
     font-weight: var(--fw-regular);
-    line-height: f-unitless-lh(15, 22);
+    line-height: $lh-base;
     color: var(--gray-800);
 }
 
 a {
-    text-decoration: underline;
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-base);
 
     &:hover,
     &:focus {
         text-decoration: none;
+        text-shadow: 0 0 var(--black);
     }
 }
 
 img {
     max-width: 100%;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+input {
+    padding: rem-calc(11) rem-calc(24);
+    font-size: $fsz-15;
+    line-height: $lh-base;
+    background-color: var(--white);
+    border: none;
+    border-radius: rem-calc(5);
+    box-shadow: var(--box-shadow-base);
+    transition: var(--transition-base);
+    &::placeholder {
+        color: var(--gray-800);
+        text-transform: capitalize;
+    }
+    &:focus {
+        box-shadow: var(--box-shadow-accent);
+        outline: none;
+    }
+}
+
+button {
+    font-family: inherit;
+    font-size: $fsz-15;
+    line-height: $lh-base;
+    &:hover {
+        cursor: pointer;
+    }
 }

@@ -1,3 +1,38 @@
-<footer>
-    I'm footer
+<footer class="main-footer">
+    <div class="main-footer__content container">
+        {{> ../contacts/contacts parentContact="main-footer__contact"}}
+        <div>
+            <fieldset class="main-footer__mailing">
+                <label for="subscr_email" class="main-footer__label subtitle-md">Recive email updates</label>
+                <div class="main-footer__email-field">
+                    <input type="email" id="subscr_email" class="main-footer__email" name="subscription-email" placeholder="Your email address">
+                    <button type="submit" class="main-footer__submit">Join</button>
+                </div>
+            </fieldset>
+            <nav class="main-footer__nav">
+                <span class="main-footer__subtitle subtitle-sm">Shop</span>
+                <ul class="main-footer__category">
+                    <li class="main-footer__category-item"><a href="#">Shop</a></li>
+                    <li class="main-footer__category-item"><a href="#">Collection</a></li>
+                    <li class="main-footer__category-item"><a href="#">Outlet</a></li>
+                    <li class="main-footer__category-item"><a href="#">Lookbook</a></li>
+                </ul>
+                <span class="main-footer__subtitle subtitle-sm">Help</span>
+                <ul class="main-footer__category">
+                    <li class="main-footer__category-item"><a href="#">FAQ</a></li>
+                    <li class="main-footer__category-item"><a href="#">Privacy Policy</a></li>
+                    <li class="main-footer__category-item"><a href="#">Tearms and conditions</a></li>
+                    <li class="main-footer__category-item"><a href="#">Return and Exchanges</a></li>
+                </ul>
+                <span class="main-footer__subtitle subtitle-sm">About</span>
+                <ul class="main-footer__category">
+                    <li class="main-footer__category-item"><a href="#">Journal</a></li>
+                    <li class="main-footer__category-item"><a href="#">Our Story</a></li>
+                    <li class="main-footer__category-item"><a href="#">Contact</a></li>
+                    <li class="main-footer__category-item"><a href="#">Store Location</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <span class="main-footer__copyright">Copyright © 2020. Your company name.  All rights reserved</span>
 </footer>

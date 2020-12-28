@@ -1,0 +1,33 @@
+.contact {
+    &__logo {
+        display: block;
+        margin-bottom: rem-calc(17);
+    }
+
+    &__desc {
+        max-width: 75%;
+        margin-bottom: rem-calc(40);
+        margin-top: 0;
+    }
+
+    &__address {
+        margin-bottom: rem-calc(16);
+        font-style: normal;
+    }
+
+    &__link {
+        display: block;
+        width: max-content;
+
+        &:not(:last-of-type) {
+            margin-bottom: rem-calc(7);
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                margin-top: rem-calc(3);
+                border-bottom: 1px solid var(--black);
+            }
+        }
+    }
+}

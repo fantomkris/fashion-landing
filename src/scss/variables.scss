@@ -5,7 +5,11 @@
     /* Color pallet */
 
     --black:             #000000;
+    --black-t-7:         rgba(0, 0, 0, 0.07);
+    --black-t-35:        rgba(0, 0, 0, 0.35);
+    --gray-200:          #F2F8FC;
     --gray-800:          #22262A;
+    --aquamarine-300:    #E7F5F8;
     --white:             #ffffff;
 
     /* Fonts */
@@ -18,7 +22,25 @@
     --fw-bold:               700;
 
     --fst-italic:            italic;
+
+    /* Visual effects */
+    --box-shadow-base:          0 0 5px 0 var(--black-t-7);
+    --box-shadow-accent:        0 0 5px 0 var(--black-t-35);
+    --transition-base:          all 0.25s ease-in-out;
 }
 
 /* Font size */
 $fsz-15:                rem-calc(15);
+$fsz-20:                rem-calc(20);
+$fsz-25:                rem-calc(25);
+
+$lh-base:               unitless-lh(15, 22);
+
+/* Grid breakpoints */
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);

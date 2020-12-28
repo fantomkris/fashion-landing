@@ -5,3 +5,23 @@
     height: 1px;
     margin: -1px;
 }
+
+.container {
+    width: 100%;
+    max-width: rem-calc(1138);
+    margin: 0 auto;
+}
+
+.subtitle-md {
+    font-size: $fsz-25;
+    font-weight: var(--fw-bold);
+    line-height: unitless-lh(25, 38);
+    text-transform: uppercase;
+}
+
+.subtitle-sm {
+    font-size: $fsz-20;
+    font-weight: var(--fw-semibold);
+    line-height: unitless-lh(20, 30);
+    text-transform: uppercase;
+}

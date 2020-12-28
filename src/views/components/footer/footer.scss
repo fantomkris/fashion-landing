@@ -1,0 +1,101 @@
+.main-footer {
+    padding-top: rem-calc(50);
+    background-color: var(--gray-200);
+
+    @include media-breakpoint-up(md) {
+        padding-top: rem-calc(115);
+    }
+
+    &__content {
+        display: flex;
+        @include media-breakpoint-down(lg) {
+            padding: 0 rem-calc(10);
+        }
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+
+        > * {
+            @include media-breakpoint-up(lg) {
+                flex: 0 0 50%;
+            }
+        }
+    }
+
+    &__contact {
+        @include media-breakpoint-down(lg) {
+            margin-bottom: rem-calc(60);
+        }
+    }
+
+    &__mailing {
+        position: relative;
+        margin-bottom: rem-calc(70);
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: rem-calc(24);
+    }
+
+    &__email-field {
+        position: relative;
+        @include media-breakpoint-down(lg) {
+            max-width: rem-calc(600);
+        }
+    }
+
+    &__email {
+        display: block;
+        width: 100%;
+        padding-right: rem-calc(70);
+    }
+
+    &__submit {
+        position: absolute;
+        top: 50%;
+        right: rem-calc(23);
+        transform: translateY(-50%);
+        font-weight: var(--fw-semibold);
+        color: var(--gray-800);
+        text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    &__nav {
+        @include media-breakpoint-up(md) {
+            display: grid;
+            grid-auto-flow: column;
+            grid-column-gap: rem-calc(88);
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(2, auto);
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: rem-calc(27);
+    }
+
+    &__category {
+        @include list-unstyled();
+    }
+
+    &__category-item {
+        margin-bottom: rem-calc(21);
+    }
+
+    &__copyright {
+        display: block;
+        width: 100%;
+        margin-top: rem-calc(106);
+        padding: rem-calc(35) 0;
+        color: var(--gray-800);
+        text-align: center;
+        background-color: var(--aquamarine-300);
+        @include media-breakpoint-down(md) {
+            margin-top: rem-calc(30);
+        }
+    }
+}
