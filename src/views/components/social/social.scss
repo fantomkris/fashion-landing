@@ -1,3 +1,18 @@
 .social {
+    @extend %flex-base;
     @include list-unstyled();
+    margin-top: rem-calc(16);
+
+    &__item {
+        &:not(:last-of-type) {
+            margin-right: rem-calc(16);
+        }
+    }
+
+    &__icon {
+        @include media-breakpoint-down(md) {
+            max-width: rem-calc(30);
+            max-height: rem-calc(30);
+        }
+    }
 }

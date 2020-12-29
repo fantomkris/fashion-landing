@@ -17,11 +17,4 @@
             outline: none;
         }
     }
-
-    &__icon {
-        .user-action__button:hover & {
-            transform: scale(1.2);
-            transition: var(--transition-base);
-        }
-    }
 }

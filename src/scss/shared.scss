@@ -26,6 +26,12 @@
     max-width: rem-calc(18);
     max-height: rem-calc(18);
     color: currentColor;
+    transition: var(--transition-base);
+
+    a:hover &,
+    button:hover & {
+        transform: scale(1.2);
+    }
 }
 
 .container {
