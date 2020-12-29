@@ -1,0 +1,27 @@
+.user-action {
+    @extend %flex-base;
+    @include list-unstyled();
+
+    &__item {
+        &:not(:last-of-type) {
+            margin-right: rem-calc(20);
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        padding: rem-calc(10);
+        background-color: transparent;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__icon {
+        .user-action__button:hover & {
+            transform: scale(1.2);
+            transition: var(--transition-base);
+        }
+    }
+}

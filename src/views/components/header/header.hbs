@@ -1,3 +1,7 @@
-<header>
-    I'm header
+<header class="main-header">
+    <div class="main-header__content container">
+        <span class="main-header__logo subtitle-lg">Your logo</span>
+        {{> ../menu/menu parentMenu="main-header__menu"}}
+        {{> ../user-action/user-action}}
+    </div>
 </header>

@@ -1,3 +1,9 @@
+/* Extends */
+%flex-base {
+    display: flex;
+    align-items: center;
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -6,10 +12,37 @@
     margin: -1px;
 }
 
+.show {
+    display: block;
+    transition: var(--transition-base);
+}
+
+.hidden {
+    display: none;
+    transition: var(--transition-base);
+}
+
+.icon {
+    max-width: rem-calc(18);
+    max-height: rem-calc(18);
+    color: currentColor;
+}
+
 .container {
     width: 100%;
     max-width: rem-calc(1138);
     margin: 0 auto;
+
+    @include media-breakpoint-down(lg) {
+        padding: 0 rem-calc(10);
+    }
+}
+
+.subtitle-lg {
+    font-size: $fsz-28;
+    font-weight: var(--fw-bold);
+    line-height: unitless-lh(28, 42);
+    text-transform: uppercase;
 }
 
 .subtitle-md {

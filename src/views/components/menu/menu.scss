@@ -1,0 +1,55 @@
+.menu {
+    position: relative;
+    margin: 0;
+
+    &__collapse {
+        display: block;
+        margin-left: auto;
+        background-color: transparent;
+        border: none;
+        @include media-breakpoint-up(xl) {
+            display: none;
+        }
+    }
+
+    &__icon {
+        max-width: rem-calc(30);
+        max-height: rem-calc(30)
+    }
+
+    &__list {
+        @extend %flex-base;
+        @include list-unstyled();
+        flex-wrap: wrap;
+        transition: var(--transition-base);
+        @include media-breakpoint-up(xl) {
+            display: flex;
+        }
+        @include media-breakpoint-down(lg) {
+            position: absolute;
+            right: 0;
+            top: 100%;
+            min-width: rem-calc(200);
+            padding: rem-calc(20) rem-calc(30);
+            background-color: var(--white);
+            box-shadow: var(--box-shadow-base);
+        }
+    }
+
+    &__item {
+        &:not(:last-of-type) {
+            @include media-breakpoint-up(xl) {
+                margin-right: rem-calc(25);
+            }
+            @include media-breakpoint-down(lg) {
+                margin-bottom: rem-calc(25);
+            }
+        }
+    }
+
+    &__link {
+        font-size: $fsz-18;
+        line-height: unitless-lh(18, 27);
+        text-transform: uppercase;
+    }
+}
