@@ -4,6 +4,11 @@
     align-items: center;
 }
 
+%size-18 {
+    font-size: $fsz-18;
+    line-height: unitless-lh(18, 27);
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -44,6 +49,13 @@
     }
 }
 
+.title-lg {
+    font-size: $fsz-80;
+    font-weight: var(--fw-bold);
+    line-height: unitless-lh(80, 120);
+    text-transform: uppercase;
+}
+
 .subtitle-lg {
     font-size: $fsz-28;
     font-weight: var(--fw-bold);
@@ -63,4 +75,12 @@
     font-weight: var(--fw-semibold);
     line-height: unitless-lh(20, 30);
     text-transform: uppercase;
+}
+
+.btn-main {
+    @include btn-base();
+}
+
+.btn-accent {
+    @include btn-base(var(--gray-800), var(--white));
 }

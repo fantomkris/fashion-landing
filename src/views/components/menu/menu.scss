@@ -18,6 +18,7 @@
     }
 
     &__list {
+        z-index: 100;
         @extend %flex-base;
         @include list-unstyled();
         flex-wrap: wrap;
@@ -48,8 +49,7 @@
     }
 
     &__link {
-        font-size: $fsz-18;
-        line-height: unitless-lh(18, 27);
+        @extend %size-18;
         text-transform: uppercase;
     }
 }
