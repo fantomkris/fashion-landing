@@ -1,0 +1,8 @@
+.homepage {
+    &__mb {
+        margin-bottom: rem-calc(120);
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem-calc(60);
+        }
+    }
+}

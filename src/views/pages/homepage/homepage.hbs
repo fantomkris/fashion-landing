@@ -1,5 +1,6 @@
-{{#extend "_site-layout" title="Homepage"}}
+{{#extend "_site-layout" title="Homepage" pageClass="homepage"}}
     {{#content "main-content"}}
-    {{> ../../components/hero/hero}}
+    {{> ../../components/hero/hero parentHero="homepage__mb"}}
+    {{> ../../components/category/category parentCategory="homepage__mb"}}
     {{/content}}
 {{/extend}}
