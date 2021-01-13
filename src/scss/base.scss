@@ -11,10 +11,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--ff-base);
-    font-size: $fsz-15;
     font-weight: var(--fw-regular);
-    line-height: $lh-base;
     color: var(--gray-800);
+}
+
+body {
+    font-size: $fsz-15;
+    line-height: $lh-base;
 }
 
 a {

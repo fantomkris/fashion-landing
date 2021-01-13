@@ -77,10 +77,31 @@
     text-transform: uppercase;
 }
 
+.subtitle-sm-bold {
+    @extend .subtitle-sm;
+    font-weight: var(--fw-bold)
+}
+
 .btn-main {
     @include btn-base();
 }
 
 .btn-accent {
     @include btn-base(var(--gray-800), var(--white));
+}
+
+.link-underlined {
+    display: flex;
+    flex-direction: column;
+    &::after {
+        content: "";
+        width: 100%;
+        margin-top: rem-calc(4);
+        border-bottom: 1px solid var(--gray-800);
+    }
+}
+
+.link-underlined-upcase {
+    @extend .link-underlined;
+    text-transform: uppercase;
 }
