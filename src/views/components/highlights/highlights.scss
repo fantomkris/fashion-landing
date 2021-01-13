@@ -1,5 +1,17 @@
 .highlights {
 
+    &__title {
+        margin-top: 0;
+        margin-bottom: rem-calc(16);
+        font-weight: var(--fw-bold);
+        text-align: center;
+    }
+
+    &__desc {
+        margin-bottom: rem-calc(65);
+        text-align: center;
+    }
+
     &__content {
         @include media-breakpoint-up(sm) {
             display: grid;
@@ -32,7 +44,7 @@
         font-weight: var(--fw-light);
     }
 
-    &__title {
+    &__product {
         font-weight: var(--fw-semibold);
         text-overflow: ellipsis;
         white-space: nowrap;
