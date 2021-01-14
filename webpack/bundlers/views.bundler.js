@@ -7,34 +7,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 var ViewsBundler = function (isProd, srcPath) {
     var layouts = require("handlebars-layouts");
 
-    var equalFn = function (handlebars) {
-        handlebars.registerHelper("if_eq", function (a, b, options) {
-            // noinspection EqualityComparisonWithCoercionJS
-            if (a == b) {
-                return options.fn(this);
-            } else {
-                return options.inverse(this);
-            }
-        });
-    };
-
-    var notEqualFn = function (handlebars) {
-        handlebars.registerHelper("if_ne", function (a, b, options) {
-            // noinspection EqualityComparisonWithCoercionJS
-            if (a != b) {
-                return options.fn(this);
-            } else {
-                return options.inverse(this);
-            }
-        });
-    };
-
-    var rawFn = function (handlebars) {
-        handlebars.registerHelper("raw", function (options) {
-            return options.fn();
-        });
-    };
-
     var repeatFn = function (handlebars) {
         handlebars.registerHelper("repeat", function (count, options) {
             var result = "", data;
@@ -56,7 +28,7 @@ var ViewsBundler = function (isProd, srcPath) {
             id: path.basename(file).replace(".hbs", ""),
             path: path.join(srcPath, file)
         })),
-        helpers: [layouts, equalFn, notEqualFn, rawFn, repeatFn]
+        helpers: [layouts, repeatFn]
     };
 
     this.extend = (webpackConfig) => {

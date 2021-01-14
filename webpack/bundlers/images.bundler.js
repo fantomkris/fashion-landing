@@ -13,7 +13,6 @@ var ImagesBundler = function (isProd, srcPath) {
                         loader: "file-loader",
                         options: {
                             name: `content/[path][name].[ext]${ isProd ? "?v=[hash]" : "" }`,
-                            outputPath: value => value.replace("/images/", "/images/website/"),
                             esModule: false
                         }
                     }],

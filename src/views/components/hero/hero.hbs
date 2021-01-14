@@ -1,9 +1,16 @@
-<section class="hero {{parentHero}}">
+<section class="hero {{#if heroAlt}}hero-alt{{/if}} {{parentHero}}" >
     <div class="hero__content">
-        <span class="hero__label">New trend</span>
-        <h1 class="hero__title title-lg">Collusion</h1>
-        <p class="hero__desc">An exclusive selection of this season's trends.</p>
+        {{#if heroLabel}}<span class="hero__label">{{heroLabel}}</span>{{/if}}
+        {{#if heroTitle}}<h1 class="hero__title title-lg">{{heroTitle}}</h1>{{/if}}
+        {{#if heroDesc}}<p class="hero__desc">{{heroDesc}}</p>{{/if}}
+        {{#unless heroAlt}}
         <a href="#lookbook" class="hero__btn btn-main">Discover</a>
         <a href="#shop" class="hero__btn btn-main">Shop now</a>
+        {{else}}
+        <a href="#collection" class="hero__btn btn-main">SHOP COLLECTION</a>
+        {{/unless}}
+
     </div>
 </section>
+
+
